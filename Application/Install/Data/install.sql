@@ -1705,7 +1705,7 @@ CREATE TABLE IF NOT EXISTS `opensns_ucenter_admin` (
 
 CREATE TABLE IF NOT EXISTS `opensns_ucenter_member` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-  `username` char(16) NOT NULL COMMENT '用户名',
+  `username` char(32) NOT NULL COMMENT '用户名',
   `password` char(32) NOT NULL COMMENT '密码',
   `email` char(32) NOT NULL COMMENT '用户邮箱',
   `mobile` char(15) NOT NULL COMMENT '用户手机',
