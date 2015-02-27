@@ -20,6 +20,7 @@ class IndexController extends Controller
      */
     public function _initialize()
     {
+//        p(getMyToxMoney());die;
         $tree = D('shopCategory')->getTree();
         $this->assign('tree', $tree);
         if (is_login()) {

@@ -6,6 +6,7 @@
 // +----------------------------------------------------------------------
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
 // +----------------------------------------------------------------------
+//die('fuck');
 
 // OneThink常量定义
 use Admin\Model\AuthRuleModel;
@@ -16,6 +17,14 @@ const ONETHINK_ADDON_PATH = './Addons/';
  * 系统公共库文件
  * 主要定义系统公共函数库
  */
+
+/**
+ * 系统打印函数
+ */
+function p($array){
+    echo dump($array,1,'<pre>',0);
+}
+
 
 /**
  * 检测用户是否登录

@@ -27,6 +27,7 @@ class BlogController extends Controller
 
     protected function _initialize()
     {
+        header("Content-Type:text/html;charset=utf-8");
         /* 读取站点配置 */
         $config = api('Config/lists');
         C($config); //添加配置
@@ -44,7 +45,6 @@ class BlogController extends Controller
             );
         $category = D('Category')->getTree();
         $this->assign('categories', $category); //栏目
-        //dump($category);exit;
         foreach ($category as $cat) {
             if ($cat['_']) {
                 $children = array();
@@ -58,6 +58,7 @@ class BlogController extends Controller
             $sub_menu['left'][] = $menu_item;
             unset($children);
         }
+
         $this->assign('sub_menu', $sub_menu);
         $this->setTitle('资讯');
 
@@ -70,4 +71,6 @@ class BlogController extends Controller
             $this->error($result['message'], $result['url']);
         }
     }
+
+
 }

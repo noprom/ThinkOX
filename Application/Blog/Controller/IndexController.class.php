@@ -33,14 +33,13 @@ class IndexController extends BlogController
         }
 
 
-
         /* 模板赋值并渲染模板 */
         $this->assign('category', $category);
         $this->assign('list', $list);
 
         $this->assign('page', D('Document')->page); //分页
 
-
+//        p($list);die;
         $this->display();
     }
 

@@ -25,7 +25,7 @@ class ConfigApi {
                 $config[$value['name']] = self::parse($value['type'], $value['value']);
             }
         }
-        return $config;
+         return $config;
     }
 
     /**

@@ -14,7 +14,7 @@
  */
 
 return array(
-
+    'URL_MODEL'            => 2, //URL模式  默认关闭伪静态
     // 预先加载的标签库
     'TAGLIB_PRE_LOAD' => 'OT\\TagLib\\Article,OT\\TagLib\\Think',
 
